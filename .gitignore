@@ -1,0 +1,8 @@
+.DS_STORE
+
+# ignores
+projects/vidtube/.env
+projects/vidtube/.env.sample
+
+# ignore node modules
+node_modules

@@ -1,0 +1,26 @@
+{
+  "name": "caffeine",
+  "version": "1.0.0",
+  "description": "A simple app for managing multiple coffees",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "express",
+    "coffee",
+    "caffeine"
+  ],
+  "author": "sampath singamsetty",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

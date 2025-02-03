@@ -1,0 +1,234 @@
+https://app.eraser.io
+
+ER Diagram
+
+-- 1 --
+
+todos [icon: list] {
+  _id string pk
+  content string
+  complete boolean
+  subTodos ObjectId[] subTodos
+  createdBy ObjectId users
+  createdAt Date
+  updatedAt Date
+}
+
+users [icon: user] {
+  _id string pk
+  username string
+  email string
+  password string
+}
+
+subTodos [icon: list] {
+  _id string pk
+  content string
+  complete boolean
+  createdBy ObjectId user
+  createdAt Date
+  updatedAt Date
+}
+
+todos.subTodos < subTodos._id
+todos.createdBy - users._id
+subTodos.createdBy - users._id
+
+
+-- 2 --
+users [icon: user] {
+  _id string pk
+  username string
+  email string
+  password string
+}
+
+products [icon: box] {
+  _id string pk
+  name string
+  description string
+  productImage string
+  price number
+  stock number
+  category ObjectId categories
+  owner ObjectId users
+  createdAt Date
+  updatedAt Date
+}
+
+categories [icon: package] {
+  _id string pk
+  name string
+  createdAt Date
+  updatedAt Date
+}
+
+orderItems [icon: list] {
+  _id string pk
+  productId ObjectId products
+  quantity number
+}
+
+orders [icon: list] {
+  _id string pk
+  customer ObjectId users
+  orderItems ObjectId[] orderItems
+  address string
+  status enum "PENDING", "CANCELLED", "DELIVERED"
+  paymentId string
+  createdAt Date
+  updatedAt Date
+}
+
+products.category - categories._id
+products.owner - users._id
+orderItems.productId - products._id
+orders.customer - users._id
+orders.orderItems < orderItems._id
+
+
+-- 3 --
+title Hospital Management System
+
+hospitals[icon: building, color: Purple] {
+  _id string pk
+  name string
+  address string[]
+  zipcode string
+  specialization string[]
+  creaedAt Date
+  updatedAt Date
+}
+
+patients[icon: user, color: Green] {
+  _id string pk
+  name string
+  diagnosedWith string
+  address string[]
+  age number
+  gender enum "M" "F" "X"
+  bloodgroup string
+  admittedTo ObjectId string
+}
+
+doctor [icon: stethoscope, color: Red] {
+  _id string pk
+  name string
+  salary string
+  qualification string[]
+  experienceInYears string
+  worksInHospitals ObjectId[] hospitals
+}
+
+medicalRecords [icon: gcp-release-notes] {
+  _id string pk
+  patiendId ObjectId patients
+  description string
+  creaedAt Date
+  updatedAt Date
+}
+
+patients.admittedTo - hospitals._id
+doctor.worksInHospitals < hospitals._id
+medicalRecords._id - patients._id
+
+
+-- 4 --
+title YouTube Video
+
+videos [icon: youtube, color: Purple] {
+  _id string pk
+  videoFile string
+  thumbnail string
+  owner ObjectId users
+  title string
+  description string
+  duration number
+  views number
+  isPublished boolean
+  createdAt Date
+  updatedAt Date
+}
+
+users [icon: gcp-support, color: Yellow] {
+  _id string pk
+  watchHistory ObjectId[] videos
+  username string
+  email string
+  fullName string
+  avatar string
+  coverImage string
+  password string
+  token string
+  createdAt Date
+  updatedAt Date
+}
+
+playlists [icon: book-open, color: Green] {
+  _id string pk
+  name string
+  description string
+  createdAt Date
+  updatedAt Date
+  videos ObjectId[] videos
+  owner ObjectId[] users
+}
+
+tweets [color: Blue, icon: twitter] {
+  _id string pk
+  owner ObjectId users
+  content string
+  createdAt Date
+  updatedAt Date
+}
+
+comments [color: Orange, icon: message-square] {
+  _id string
+  content string
+  createdAt Date
+  updatedAt Date
+  video ObjectId videos
+  owner ObjectId users
+}
+
+likes [color: Black, icon: thumbs-up] {
+  _id string pk
+  comment ObjectId comments
+  video ObjectId videos
+  likedBy ObjectId users
+  tweet ObjectId tweets
+  createdAt Date
+  updatedAt Date
+}
+
+subscriptions [color: Orange, icon: gcp-debugger] {
+  _id string pk
+  subscriber ObjectId users
+  channel ObjectId users
+  createdAt Date
+  updatedAt Date
+}
+
+users.watchHistory  <> videos._id
+
+videos.owner - users._id
+
+playlists.videos - users._id
+playlists.owner - users._id
+
+likes.comment - comments._id
+likes.video  - videos._id
+likes.likedBy - users._id
+likes.tweet - tweets._id
+
+comments.owner - users._id
+comments.video - videos._id
+
+playlists.owner - users._id
+playlists.videos < videos._id
+
+tweets.owner - users._id
+
+subscriptions.subscriber - users._id
+subscriptions.channel - users._id
+

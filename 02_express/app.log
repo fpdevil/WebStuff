@@ -1,0 +1,15 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/\",\"status\":\"404\",\"responseTime\":\"3.155\"}","timestamp":"2025-01-23T23:27:57.133Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"4.821\"}","timestamp":"2025-01-23T23:28:05.771Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"5.759\"}","timestamp":"2025-01-23T23:31:49.701Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"500\",\"responseTime\":\"2.138\"}","timestamp":"2025-01-23T23:34:28.186Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"2.172\"}","timestamp":"2025-01-23T23:34:46.477Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.884\"}","timestamp":"2025-01-23T23:34:49.135Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.484\"}","timestamp":"2025-01-23T23:34:49.949Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.404\"}","timestamp":"2025-01-23T23:34:51.251Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.554\"}","timestamp":"2025-01-23T23:34:52.033Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.408\"}","timestamp":"2025-01-23T23:34:52.715Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"0.865\"}","timestamp":"2025-01-23T23:34:55.793Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees/3\",\"status\":\"200\",\"responseTime\":\"1.779\"}","timestamp":"2025-01-23T23:35:25.142Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"DELETE\",\"url\":\"/coffees/3\",\"status\":\"204\",\"responseTime\":\"1.982\"}","timestamp":"2025-01-23T23:35:30.628Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees/3\",\"status\":\"404\",\"responseTime\":\"0.749\"}","timestamp":"2025-01-23T23:35:34.108Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/coffees\",\"status\":\"200\",\"responseTime\":\"1.034\"}","timestamp":"2025-01-23T23:35:36.823Z"}
