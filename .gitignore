@@ -4,5 +4,8 @@
 projects/vidtube/.env
 projects/vidtube/.env.sample
 
+# ignore
+mongo.txt
+
 # ignore node modules
 node_modules
